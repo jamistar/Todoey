@@ -14,11 +14,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    let realmMigration:RealmMigration = RealmMigration()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     
         //print(Realm.Configuration.defaultConfiguration.fileURL)
-        
+        let _:RealmMigration = RealmMigration()
        
         do {
             let _ = try Realm()
